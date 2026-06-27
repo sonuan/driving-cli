@@ -17,6 +17,21 @@ Fetch and follow instructions from https://raw.githubusercontent.com/sonuan/driv
 
 `driving-cli-tool` 是一个 Python CLI 工具，用于管理 AI Coding 规范仓库、框架文档、技能、规则和需求目录。
 
+### 安装前检查
+
+**检查项目根目录和driving-cli-tool是否已安装：**
+
+```bash
+# 检查项目根目录
+pwd
+
+# 检查driving-cli-tool是否已安装
+driving --version
+```
+
+**如果项目根目录不是当前目录，请切换到项目根目录。**
+**如果driving-cli-tool已安装，请跳过此步骤。**
+
 ### macOS / Linux 安装
 
 ```bash
@@ -60,12 +75,11 @@ driving --version
 **安装方式：**
 
 ```bash
-# 方式一：使用示例仓库
+# 方式一：安装 driving-cli 仓库作为默认 power
 driving power install --url https://github.com/sonuan/driving-cli.git
 
 # 方式二：提供自定义配置仓库地址（推荐）
-driving power install --url <YOUR_CONFIG_REPO_URL>
-# 示例：driving power install --url https://github.com/your-org/your-config-repo.git
+driving power install --url <url>
 
 # 方式三：跳过此步骤，不使用 Power 层
 # 直接进入下一步
@@ -86,19 +100,20 @@ driving 仓库是 driving-cli-tool 的工程化仓库，支持多个仓库、懒
 **安装方式：**
 
 ```bash
-# 安装指定的 driving（替换 <DRIVING_REPO_URL> 为实际的仓库地址）
-driving repo install --url <DRIVING_REPO_URL>
+# 方式一：安装 driving-cli 仓库
+driving repo install --url https://github.com/sonuan/driving-cli.git --power <power_name>
 
-# 示例：使用示例仓库
-# driving repo install --url https://github.com/sonuan/driving-cli.git
+# 方式二：安装指定仓库（替换 <REPO_URL> 为实际的仓库地址）
+driving repo install --url <REPO_URL> --power <power_name>
+
+# 方式三：跳过此步骤，暂不安装其他仓库
+# 直接进入下一步
 ```
 
 **常用 Skill 示例：**
 
 | Skill 名称 | 用途 | 安装命令示例 |
 |-----------|------|-------------|
-
-> **提示**：如不需要安装其他仓库，可直接跳过此步骤。
 
 ---
 
@@ -226,7 +241,7 @@ driving power pull
 
 1. 确认项目根目录存在 `driving.config.json` 或 `driving.power.json`
 2. 运行 `driving repo list` 检查仓库是否已安装
-3. 如果仓库未安装，运行 `driving repo install --url <YOUR_REPO_URL>`
+3. 如果仓库未安装，运行 `driving repo install --url <REPO_URL> --power <power_name>`
 
 ---
 
