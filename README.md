@@ -6,7 +6,7 @@
 
 ## 🚀 交给AI
 
-**复制以下内容发送给 AI，即可开始安装：**
+**在项目根目录下，复制以下内容发送给 AI，即可开始安装：**
 
 ```
 Fetch and follow instructions from https://raw.githubusercontent.com/sonuan/driving-cli/develop/README.md
