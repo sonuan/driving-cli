@@ -1,0 +1,11 @@
+{
+  "min_cli_version": "1.4.0",
+  "system_prompt": "prompts/system_prompt.md",
+  "gates": "",
+  "skills": {
+    "enabled": [
+      "driving-cli"
+    ],
+    "disabled": []
+  }
+}
