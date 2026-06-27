@@ -76,10 +76,13 @@ driving --version
 
 ```bash
 # 方式一：安装 driving-cli 仓库作为默认 power
-driving power install --url https://github.com/sonuan/driving-cli.git
+driving power install --url https://github.com/sonuan/driving-cli.git --description "包含driving-cli技能、系统提示词、多repo仓库等" --branch "develop"
 
 # 方式二：提供自定义配置仓库地址（推荐）
-driving power install --url <url>
+# url：必填，自定义配置仓库地址
+# description：可选，power用途描述
+# branch：可选，自定义分支，默认为空字符串，即使用主分支
+driving power install --url <url> --description <power用途> --branch <branch>
 
 # 方式三：跳过此步骤，不使用 Power 仓库
 # 直接进入下一步
@@ -97,14 +100,21 @@ driving power install --url <url>
 
 driving 仓库是 driving-cli-tool 的工程化仓库，支持多个仓库、懒加载、仓库静默更新等，不同团队成员负责不同模块，各自维护。
 
+driving 仓库可以同时作为 power 仓库，也可以作为其他 power 仓库的子仓库。
+
 **安装方式：**
 
 ```bash
 # 方式一：安装 driving-cli 仓库
-driving repo install --url https://github.com/sonuan/driving-cli.git --power <power_name>
+# power_name：可选，本地已有的 power 仓库名称
+driving repo install --url https://github.com/sonuan/driving-cli.git --power <power_name> --tag "base" --description "包含driving-cli技能、系统提示词、power仓库等"
 
-# 方式二：安装指定仓库（替换 <REPO_URL> 为实际的仓库地址）
-driving repo install --url <REPO_URL> --power <power_name>
+# 方式二：安装指定仓库
+# repo_url：必填，实际的仓库地址
+# power_name：可选，本地已有的 power 仓库名称
+# description：可选，仓库用途描述
+# branch：可选，自定义分支，默认为空字符串，即使用主分支
+driving repo install --url <repo_url> --power <power_name> --description <仓库用途> --branch <branch>
 
 # 方式三：跳过此步骤，暂不安装其他仓库
 # 直接进入下一步
@@ -243,7 +253,7 @@ driving power pull
 
 1. 确认项目根目录存在 `driving.config.json` 或 `driving.power.json`
 2. 运行 `driving repo list` 检查仓库是否已安装
-3. 如果仓库未安装，运行 `driving repo install --url <REPO_URL> --power <power_name>`
+3. 如果仓库未安装，运行 `driving repo install --url <repo_url> --power <power_name>`
 
 ---
 
