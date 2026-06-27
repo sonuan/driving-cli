@@ -110,6 +110,8 @@ driving repo install --url <REPO_URL> --power <power_name>
 # 直接进入下一步
 ```
 
+**如果安装的仓库已在 power 层配置，可直接跳过此步骤。**
+
 **常用 Skill 示例：**
 
 | Skill 名称 | 用途 | 安装命令示例 |
