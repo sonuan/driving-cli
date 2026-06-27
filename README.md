@@ -61,11 +61,11 @@ driving --version
 
 ## 2. 初始化项目配置
 
-### 2.1 询问是否引入 Power 层解决多人多分支协作问题？
+### 2.1 询问是否引入 Power 仓库解决多人多分支协作问题？
 
-**什么是 Power 层？**
+**什么是 Power 仓库？**
 
-在多人协作、多分支开发的场景下，不同分支可能需要不同的配置文件（`driving.config.json`）。Power 层允许你将多个配置文件合并使用，避免频繁切换分支导致的配置冲突。
+在多人协作、多分支开发的场景下，不同分支可能需要不同的配置文件（`driving.config.json`）。Power 仓库允许你将多个配置文件合并使用，避免频繁切换分支导致的配置冲突。
 
 **使用场景示例：**
 
@@ -81,7 +81,7 @@ driving power install --url https://github.com/sonuan/driving-cli.git
 # 方式二：提供自定义配置仓库地址（推荐）
 driving power install --url <url>
 
-# 方式三：跳过此步骤，不使用 Power 层
+# 方式三：跳过此步骤，不使用 Power 仓库
 # 直接进入下一步
 ```
 
@@ -110,7 +110,7 @@ driving repo install --url <REPO_URL> --power <power_name>
 # 直接进入下一步
 ```
 
-**如果安装的仓库已在 power 层配置，可直接跳过此步骤。**
+**如果安装的仓库已在 power 仓库中配置，可直接跳过此步骤。**
 
 **常用 Skill 示例：**
 
@@ -250,7 +250,7 @@ driving power pull
 ## 快速开始总结
 
 1. **安装工具** → 根据操作系统选择对应的安装方式
-2. **配置 Power 层**（可选）→ 解决多人多分支协作问题
+2. **配置 Power 仓库**（可选）→ 解决多人多分支协作问题
 3. **安装其他 Driving 仓库**（可选）→ 扩展 AI 辅助能力
 4. **创建 AGENTS.md** → 在项目根目录创建，确保 AI 每次会话正确加载上下文
 5. **验证安装** → 运行 `driving load --with agent` 检查配置

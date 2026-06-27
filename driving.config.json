@@ -1,0 +1,19 @@
+{
+  "version": "2",
+  "repos": [
+    {
+      "name": "driving-cli",
+      "type": "remote",
+      "url": "https://github.com/sonuan/driving-cli.git",
+      "path": "ai-driving/driving-cli",
+      "description": "包含driving-cli技能、系统提示词、power仓库等",
+      "local_path": null,
+      "tags": [
+        "base"
+      ],
+      "modules": []
+    }
+  ],
+  "default_commit_message": "update by driving",
+  "update_version_url": ""
+}
